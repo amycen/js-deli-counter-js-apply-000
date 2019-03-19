@@ -1,13 +1,19 @@
-function takeANumber(line, name) {
-  line[line.length] = name;
-  return `Welcome, ${name}. You are number ${line.length} in line.`
+line = [1,2]
+var currNum = 0; 1 2
+line = [1,2]
+
+function takeANumber(line) {
+  currNum += 1;
+  line[line.length] = currNum;
+  line.push(++currNum);
+  return `You are number ${currNum} in line.`
 }
 
-function nowServing(katzDeliLine) {
-  if (katzDeliLine.length === 0) {
+function nowServing() {
+  if (line.length === 0) {
     return "There is nobody waiting to be served!"
   }
-  var curr = katzDeliLine.shift();
+  var curr = line.shift();
   return `Currently serving ${curr}.`;
 }
 
